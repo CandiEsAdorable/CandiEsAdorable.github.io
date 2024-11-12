@@ -25,6 +25,7 @@ body {
 
 .list-item {
     display: flex;
+    flex-direction: column;
     justify-content: space-between;
     padding: 10px 0;
     border-bottom: 1px solid #ffffff;
@@ -35,18 +36,31 @@ body {
 }
 
 .item-description {
+    display: none; /* Por defecto ocultamos las descripciones */
     text-align: right;
+    margin-top: 10px;
+}
+
+.spoiler-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.spoiler-button:hover {
+    background-color: #555555;
 }
 
 /* Estilos para pantallas pequeñas */
 @media (max-width: 768px) {
     .list-item {
-        flex-direction: column;
         text-align: left;
     }
 
     .item-description {
         text-align: left;
-        margin-top: 5px;
     }
 }
