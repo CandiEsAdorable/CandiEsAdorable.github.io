@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Lista con texto</title>
+    <title>Lista con Descripción</title>
     <style>
         /* Estilos generales */
         body {
@@ -15,47 +15,46 @@
             display: flex;
             justify-content: center;
             align-items: center;
-            height: 100vh;
+            min-height: 100vh;
         }
 
         .container {
-            display: flex;
-            justify-content: space-between;
             width: 80%;
             max-width: 800px;
+            text-align: left;
         }
 
-        ol {
-            list-style-type: decimal;
-            margin: 0;
-            padding: 0;
+        .header-text {
+            text-align: center;
+            font-size: 1.5em;
+            margin-bottom: 20px;
         }
 
-        ol li {
-            margin-bottom: 15px;
+        .list-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 0;
+            border-bottom: 1px solid #ffffff;
         }
 
-        .example-text {
+        .item-number {
+            font-weight: bold;
+        }
+
+        .item-description {
             text-align: right;
-            font-size: 1.2em;
-            margin-left: 20px;
         }
 
         /* Estilos para pantallas pequeñas */
         @media (max-width: 768px) {
-            .container {
+            .list-item {
                 flex-direction: column;
-                align-items: center;
+                text-align: left;
             }
 
-            .example-text {
-                text-align: center;
-                margin-top: 20px;
-                margin-left: 0;
-            }
-
-            ol {
-                text-align: center;
+            .item-description {
+                text-align: left;
+                margin-top: 5px;
             }
         }
     </style>
@@ -63,19 +62,40 @@
 <body>
 
     <div class="container">
-        <!-- Lista enumerada -->
-        <ol>
-            <li>Item 1</li>
-            <li>Item 2</li>
-            <li>Item 3</li>
-            <li>Item 4</li>
-            <li>Item 5</li>
-            <li>Item 6</li>
-        </ol>
-
-        <!-- Texto de ejemplo -->
-        <div class="example-text">
+        <!-- Texto principal -->
+        <div class="header-text">
             Esto es un texto de ejemplo
+        </div>
+
+        <!-- Lista enumerada con descripciones -->
+        <div class="list-item">
+            <div class="item-number">1. Item 1</div>
+            <div class="item-description">Descripción del Item 1</div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-number">2. Item 2</div>
+            <div class="item-description">Descripción del Item 2</div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-number">3. Item 3</div>
+            <div class="item-description">Descripción del Item 3</div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-number">4. Item 4</div>
+            <div class="item-description">Descripción del Item 4</div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-number">5. Item 5</div>
+            <div class="item-description">Descripción del Item 5</div>
+        </div>
+
+        <div class="list-item">
+            <div class="item-number">6. Item 6</div>
+            <div class="item-description">Descripción del Item 6</div>
         </div>
     </div>
 
