@@ -18,12 +18,16 @@ function validatePassword(event) {
 
     // Obtener el valor ingresado en el campo de contraseña
     const password = document.getElementById('password').value.trim();
+    
+    console.log("Contraseña ingresada: " + password); // Depuración
 
-    // Convertir la contraseña a minúsculas para hacer la comparación insensible a mayúsculas/minúsculas
+    // Comparar la contraseña con 'OHANA' sin importar mayúsculas/minúsculas
     if (password.toLowerCase() === 'ohana') {
+        console.log("Contraseña correcta. Redirigiendo..."); // Depuración
         // Si la contraseña es correcta, redirigir a index2.html
         window.location.href = 'index2.html';
     } else {
+        console.log("Contraseña incorrecta. Mostrando mensaje..."); // Depuración
         // Si la contraseña es incorrecta, mostrar un mensaje de alerta y restablecer el formulario
         alert('Contraseña incorrecta. Intenta de nuevo.');
         document.getElementById('loginForm').reset(); // Limpiar el formulario
