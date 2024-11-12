@@ -17,18 +17,15 @@ function validatePassword(event) {
     event.preventDefault();
 
     // Obtener el valor ingresado en el campo de contraseña
-    const password = document.getElementById('password').value;
-    
-    // Verificar si la contraseña es correcta
-    if (password === 'OHANA') {
+    const password = document.getElementById('password').value.trim();
+
+    // Convertir la contraseña a minúsculas para hacer la comparación insensible a mayúsculas/minúsculas
+    if (password.toLowerCase() === 'ohana') {
         // Si la contraseña es correcta, redirigir a index2.html
         window.location.href = 'index2.html';
     } else {
-        // Si la contraseña es incorrecta, mostrar el mensaje de error y recargar la página
-        const errorMessage = document.getElementById('error-message');
-        errorMessage.style.display = 'block'; // Mostrar el mensaje de error
-        setTimeout(function() {
-            window.location.reload(); // Recargar la página después de unos segundos
-        }, 2000); // 2 segundos de espera antes de recargar
+        // Si la contraseña es incorrecta, mostrar un mensaje de alerta y restablecer el formulario
+        alert('Contraseña incorrecta. Intenta de nuevo.');
+        document.getElementById('loginForm').reset(); // Limpiar el formulario
     }
 }
