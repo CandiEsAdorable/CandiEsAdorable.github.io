@@ -12,6 +12,12 @@ function toggleDescription(index) {
 }
 
 
+// Puedes cambiar este mensaje desde aquí
+const customMessage = "Mensaje personalizado"; // Cambia este valor para modificar el mensaje
+
+// Asignamos el mensaje a la etiqueta <h2> con id="title"
+document.getElementById('title').textContent = customMessage;
+
 function validatePassword(event) {
     // Prevenir que el formulario se envíe
     event.preventDefault();
@@ -25,7 +31,7 @@ function validatePassword(event) {
     if (password.toLowerCase() === 'ohana') {
         console.log("Contraseña correcta. Redirigiendo..."); // Depuración
         // Si la contraseña es correcta, redirigir a index2.html
-        window.location.href = 'index2.html';
+        window.location.href = 'index2.html'; // Redirección a index2.html
     } else {
         console.log("Contraseña incorrecta. Mostrando mensaje..."); // Depuración
         // Si la contraseña es incorrecta, mostrar un mensaje de alerta y restablecer el formulario
