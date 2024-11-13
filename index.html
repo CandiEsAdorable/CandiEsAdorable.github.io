@@ -10,8 +10,8 @@
 
     <!-- Contenedor de la página -->
     <div class="login-container">
-        <!-- Título que será modificado dinámicamente desde main.js -->
-        <h2 id="title">Mensaje personalizado</h2>
+        <!-- Título personalizado -->
+        <h2 id="title">Mensaje personalizado 1</h2>
 
         <!-- Formulario de contraseña -->
         <form id="loginForm" onsubmit="return validatePassword(event)">
@@ -20,13 +20,12 @@
         </form>
     </div>
 
-    <!-- Cuadro de error personalizado que estará inicialmente oculto -->
+    <!-- Cuadro de error personalizado que está oculto inicialmente -->
     <div id="error-message-box" class="error-message-box" style="display: none;">
         <p>Contraseña incorrecta. Inténtalo de nuevo.</p>
         <button onclick="hideErrorMessage()">Aceptar</button>
     </div>
 
-    <!-- Enlace al script JS -->
     <script src="js/main.js"></script>
 </body>
 </html>
