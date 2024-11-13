@@ -48,8 +48,9 @@ window.onload = function() {
 
 // Prevenir el envío del formulario al presionar "Enter" en el campo de contraseña
 document.getElementById('password').addEventListener('keydown', function(event) {
+    // Prevenir el envío del formulario con "Enter"
     if (event.key === 'Enter') {
-        event.preventDefault(); // Evitar el envío del formulario al presionar Enter
+        event.preventDefault(); // Evita que se envíe el formulario
         document.activeElement.blur(); // Cierra el teclado en móviles (si está abierto)
     }
 });
@@ -64,5 +65,12 @@ document.getElementById('loginForm').addEventListener('submit', function(event) 
 document.getElementById('password').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault(); // Prevenir que se envíe el formulario
+    }
+});
+
+// Este manejador se asegura de que el formulario no se envíe en móviles o escritorios al presionar "Enter"
+document.getElementById('loginForm').addEventListener('keypress', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevenir el envío con "Enter"
     }
 });
