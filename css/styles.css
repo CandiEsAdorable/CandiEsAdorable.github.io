@@ -70,16 +70,16 @@ body {
         font-size: 1.8em; /* Ajusta el tamaño del texto en móvil */
     }
 
-    /* Eleva el formulario y contenido en dispositivos móviles */
+    /* Eleva mucho más el formulario y contenido en dispositivos móviles */
     .login-container {
         position: relative;
-        top: 20px; /* Eleva el recuadro del login en móvil */
+        top: -100px; /* Eleva el formulario aún más (anteriormente estaba en 20px) */
         width: 90%; /* Reduce un poco el ancho */
     }
 
     body {
         justify-content: flex-start; /* Alinea el contenido hacia la parte superior */
-        padding-top: 20px; /* Da espacio extra en la parte superior */
+        padding-top: 40px; /* Da espacio extra en la parte superior para evitar que el teclado cubra el formulario */
     }
 }
 
