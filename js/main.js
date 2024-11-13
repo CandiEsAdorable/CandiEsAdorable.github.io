@@ -56,6 +56,19 @@ window.onload = function() {
     document.getElementById('error-message-box').style.display = 'none';
 };
 
+// Evento 'pageshow' para manejar el estado cuando se navega hacia atrás
+window.addEventListener('pageshow', function() {
+    // Limpiar el estado almacenado
+    localStorage.removeItem('passwordCorrect'); // Eliminar cualquier información almacenada
+
+    // Resetea el formulario
+    document.getElementById('loginForm').reset();
+    
+    // Oculta los mensajes de error y éxito
+    document.getElementById('success-message-box').style.display = 'none';
+    document.getElementById('error-message-box').style.display = 'none';
+});
+
 // Prevenir el envío del formulario al presionar "Enter" en el campo de contraseña
 document.getElementById('password').addEventListener('keydown', function(event) {
     // Prevenir el envío del formulario con "Enter"
