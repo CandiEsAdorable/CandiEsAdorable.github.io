@@ -89,12 +89,13 @@ body {
 
 /* Estilos del contenedor del formulario */
 .login-container {
-    background-color: #333;
+    background-color: black;
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     margin: 100px auto;
     width: 300px;
+    color: red; /* Color del texto */
 }
 
 /* Estilos del cuadro de error personalizado */
@@ -103,27 +104,27 @@ body {
     top: 50%;
     left: 50%;
     transform: translate(-50%, -50%);
-    background-color: #333;
-    color: white;
+    background-color: black; /* Fondo negro */
+    color: red; /* Texto rojo */
     padding: 20px;
     border-radius: 10px;
     text-align: center;
     width: 300px;
-    box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.5);
+    box-shadow: 0px 0px 10px rgba(255, 0, 0, 0.5); /* Sombra roja alrededor */
 }
 
 .error-message-box button {
     margin-top: 10px;
     padding: 10px 20px;
-    background-color: #444;
-    color: white;
-    border: none;
+    background-color: black; /* Fondo negro */
+    color: red; /* Texto rojo */
+    border: 1px solid red; /* Borde rojo */
     border-radius: 5px;
     cursor: pointer;
 }
 
 .error-message-box button:hover {
-    background-color: #555;
+    background-color: #222; /* Fondo más oscuro al pasar el ratón */
 }
 
 /* Estilos para el formulario de entrada */
@@ -131,21 +132,21 @@ input[type="password"] {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
-    border: 1px solid #444;
+    border: 1px solid red; /* Borde rojo */
     border-radius: 5px;
-    background-color: #222;
-    color: white;
+    background-color: black; /* Fondo negro */
+    color: red; /* Texto rojo */
 }
 
 button {
     padding: 10px 20px;
-    background-color: #444;
-    color: white;
-    border: none;
+    background-color: black; /* Fondo negro */
+    color: red; /* Texto rojo */
+    border: 1px solid red; /* Borde rojo */
     border-radius: 5px;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #555;
+    background-color: #222; /* Fondo más oscuro al pasar el ratón */
 }
