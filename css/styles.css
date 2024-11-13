@@ -1,3 +1,78 @@
+/* Estilos generales */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #000000; /* Fondo negro */
+    color: #ffffff; /* Texto blanco */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center; /* Centra horizontalmente */
+    align-items: center; /* Centra verticalmente */
+    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
+    text-align: center; /* Asegura que el texto está centrado */
+}
+
+.container {
+    width: 80%;
+    max-width: 800px;
+    padding: 20px;
+    background-color: #1c1c1c; /* Fondo ligeramente gris oscuro para resaltar la lista */
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(255, 255, 255, 0.2); /* Añade una sombra ligera */
+}
+
+.header-text {
+    font-size: 2em; /* Hace el texto más grande */
+    font-weight: bold;
+    margin-bottom: 20px;
+}
+
+.list-item {
+    padding: 10px 0;
+    border-bottom: 1px solid #ffffff;
+    text-align: left; /* Alinea el texto a la izquierda */
+}
+
+.item-number {
+    font-weight: bold;
+}
+
+.item-description {
+    display: none; /* Por defecto ocultamos las descripciones */
+    text-align: left;
+    margin-top: 10px;
+}
+
+.spoiler-button {
+    margin-top: 10px;
+    padding: 5px 10px;
+    background-color: #333333;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+.spoiler-button:hover {
+    background-color: #555555;
+}
+
+/* Estilos para pantallas pequeñas */
+@media (max-width: 768px) {
+    .list-item {
+        text-align: left; /* Alinea el texto a la izquierda */
+    }
+
+    .item-description {
+        text-align: left;
+    }
+
+    .header-text {
+        font-size: 1.8em; /* Ajusta el tamaño del texto en móvil */
+    }
+}
+
+
+
 /* Fondo negro para toda la página */
 body {
     font-family: Arial, sans-serif;
@@ -12,67 +87,135 @@ body {
     text-align: center; /* Asegura que el texto está centrado */
 }
 
-/* Estilos del contenedor del formulario */
+/* Estilos para el panel de login */
 .login-container {
-    background-color: #1e3a5f; /* Azul oscuro */
-    padding: 20px;
+    background-color: #333333; /* Fondo gris oscuro para el panel */
+    padding: 30px;
     border-radius: 10px;
-    text-align: center;
-    margin: 100px auto;
-    width: 300px;
-    color: white; /* Texto blanco */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Sombra suave */
+    box-shadow: 0 0 20px rgba(255, 255, 255, 0.3); /* Añade una sombra ligera */
+    width: 80%;
+    max-width: 400px; /* Limita el ancho máximo del panel */
 }
 
-/* Estilos del cuadro de error personalizado */
-.error-message-box {
-    position: fixed;
-    top: 50%;
-    left: 50%;
-    transform: translate(-50%, -50%);
-    background-color: #294a75; /* Azul medio */
-    color: white; /* Texto blanco */
-    padding: 20px;
-    border-radius: 10px;
-    text-align: center;
-    width: 300px;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5); /* Sombra similar al formulario */
+h2 {
+    margin-bottom: 20px;
 }
 
-.error-message-box button {
-    margin-top: 10px;
-    padding: 10px 20px;
-    background-color: #406090; /* Azul más claro */
-    color: white;
-    border: none;
-    border-radius: 5px;
-    cursor: pointer;
-}
-
-.error-message-box button:hover {
-    background-color: #547ca6; /* Color más claro al pasar el ratón */
-}
-
-/* Estilos para el formulario de entrada */
 input[type="password"] {
     width: 100%;
     padding: 10px;
-    margin: 10px 0;
-    border: 1px solid #547ca6; /* Borde azul */
+    margin-bottom: 20px;
     border-radius: 5px;
-    background-color: #2c4b6e; /* Fondo azul oscuro */
-    color: white;
+    border: none;
+    background-color: #444444;
+    color: #ffffff;
+    font-size: 1.1em;
+}
+
+input[type="password"]:focus {
+    outline: none;
+    background-color: #555555;
 }
 
 button {
-    padding: 10px 20px;
-    background-color: #406090; /* Azul más claro */
-    color: white;
+    width: 100%;
+    padding: 10px;
+    background-color: #007BFF; /* Color de fondo del botón */
+    color: #ffffff;
     border: none;
     border-radius: 5px;
+    font-size: 1.1em;
     cursor: pointer;
 }
 
 button:hover {
-    background-color: #547ca6; /* Color más claro al pasar el ratón */
+    background-color: #0056b3; /* Cambia el color del botón al pasar el mouse */
 }
+
+/* Estilo del mensaje de error */
+#error-message {
+    margin-top: 15px;
+    font-size: 1.2em;
+    font-weight: bold;
+}
+
+/* Estilos generales para centrar el mensaje de error */
+#error-message-box {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para que esté en el centro */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste final para centrar perfectamente */
+    background-color: #333333; /* Fondo gris oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Sombra */
+    width: 80%;
+    max-width: 400px; /* Ancho máximo */
+    text-align: center; /* Asegura que el texto está centrado */
+}
+
+/* Estilo del mensaje de error dentro de la caja */
+#error-message-box p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Estilo del botón de "Aceptar" en el mensaje */
+#error-message-box button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#error-message-box button:hover {
+    background-color: #0056b3;
+}
+
+/* Estilos generales para centrar el mensaje de éxito */
+#success-message-box {
+    display: none; /* Oculto por defecto */
+    position: fixed; /* Posición fija para que esté en el centro */
+    top: 50%; /* Centra verticalmente */
+    left: 50%; /* Centra horizontalmente */
+    transform: translate(-50%, -50%); /* Ajuste final para centrar perfectamente */
+    background-color: #333333; /* Fondo gris oscuro */
+    color: #ffffff; /* Texto blanco */
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Sombra */
+    width: 80%;
+    max-width: 400px; /* Ancho máximo */
+    text-align: center; /* Asegura que el texto está centrado */
+}
+
+/* Estilo del mensaje de éxito dentro de la caja */
+#success-message-box p {
+    font-size: 1.5em;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Estilo del botón de "Aceptar" en el mensaje */
+#success-message-box button {
+    margin-top: 20px;
+    padding: 10px;
+    background-color: #007BFF;
+    color: #ffffff;
+    border: none;
+    border-radius: 5px;
+    font-size: 1.1em;
+    cursor: pointer;
+}
+
+#success-message-box button:hover {
+    background-color: #0056b3;
+}
+

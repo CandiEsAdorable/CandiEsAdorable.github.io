@@ -10,8 +10,8 @@
 
     <!-- Contenedor de la página -->
     <div class="login-container">
-        <!-- Título personalizado -->
-        <h2 id="title">Mensaje personalizado 1</h2>
+        <!-- Título que puede ser modificado desde script.js -->
+        <h2 id="title">Mensaje personalizado</h2>
 
         <!-- Formulario de contraseña -->
         <form id="loginForm" onsubmit="return validatePassword(event)">
@@ -20,12 +20,20 @@
         </form>
     </div>
 
-    <!-- Cuadro de error personalizado que está oculto inicialmente -->
-    <div id="error-message-box" class="error-message-box" style="display: none;">
-        <p>Contraseña incorrecta. Inténtalo de nuevo.</p>
+    <!-- Mensajes flotantes -->
+    <div id="error-message-box" class="message-box" style="display: none;">
+        <p id="error-message">Contraseña incorrecta</p>
         <button onclick="hideErrorMessage()">Aceptar</button>
     </div>
 
+    <div id="success-message-box" class="message-box" style="display: none;">
+        <p>Contraseña correcta</p>
+        <button onclick="redirectToPage()">Aceptar</button>
+    </div>
+
+    
     <script src="js/main.js"></script>
 </body>
 </html>
+
+

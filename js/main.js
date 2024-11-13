@@ -12,35 +12,34 @@ function toggleDescription(index) {
 }
 
 
-// Puedes cambiar este mensaje desde aquí
-const customMessage = "Mensaje personalizado"; // Cambia este valor para modificar el mensaje
-
-// Asignamos el mensaje a la etiqueta <h2> con id="title"
+// Cambiar el mensaje personalizado
+const customMessage = "Mensaje personalizado"; // Cambia este valor si quieres otro mensaje
 document.getElementById('title').textContent = customMessage;
 
 function validatePassword(event) {
-    // Prevenir que el formulario se envíe
-    event.preventDefault();
+    event.preventDefault(); // Prevenir que el formulario se envíe
 
     // Obtener el valor ingresado en el campo de contraseña
     const password = document.getElementById('password').value.trim();
-    
-    console.log("Contraseña ingresada: " + password); // Depuración
 
     // Comparar la contraseña con 'OHANA' sin importar mayúsculas/minúsculas
     if (password.toLowerCase() === 'ohana') {
-        console.log("Contraseña correcta. Redirigiendo..."); // Depuración
-        // Si la contraseña es correcta, redirigir a index2.html
-        window.location.href = 'index2.html';
+        // Mostrar el mensaje de éxito
+        document.getElementById('success-message-box').style.display = 'block';
     } else {
-        console.log("Contraseña incorrecta. Mostrando mensaje de error...");
-        // Mostrar el cuadro de error si la contraseña es incorrecta
+        // Mostrar el mensaje de error
         document.getElementById('error-message-box').style.display = 'block';
     }
 }
 
 function hideErrorMessage() {
-    // Ocultar el cuadro de error y permitir intentar de nuevo
+    // Ocultar el mensaje de error
     document.getElementById('error-message-box').style.display = 'none';
     document.getElementById('loginForm').reset(); // Limpiar el formulario
 }
+
+function redirectToPage() {
+    // Redirigir a index2.html cuando la contraseña es correcta
+    window.location.href = 'index2.html';
+}
+
