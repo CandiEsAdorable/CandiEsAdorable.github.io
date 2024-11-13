@@ -41,8 +41,15 @@ function hideErrorMessage() {
     document.getElementById('error-message-box').style.display = 'none';
 }
 
-
 // Resetea el formulario cada vez que la página se recarga o carga
 window.onload = function() {
     document.getElementById('loginForm').reset();
 };
+
+// Función para manejar el evento de presionar "Enter" en el campo de contraseña
+document.getElementById('password').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        // Cierra el teclado al presionar Enter
+        document.activeElement.blur();
+    }
+});
