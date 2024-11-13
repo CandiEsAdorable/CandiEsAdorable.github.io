@@ -55,12 +55,6 @@ document.getElementById('password').addEventListener('keydown', function(event) 
     }
 });
 
-// Asegurarse de que al presionar "Enter" no se envíe el formulario
-document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el envío automático al presionar "Enter"
-    validatePassword(event); // Llamar a la función de validación manualmente
-});
-
 // Evitar que el formulario se envíe al presionar "Enter" cuando el campo de contraseña está seleccionado
 document.getElementById('password').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
@@ -69,6 +63,12 @@ document.getElementById('password').addEventListener('keydown', function(event) 
 });
 
 // Este manejador se asegura de que el formulario no se envíe en móviles o escritorios al presionar "Enter"
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío automático al presionar "Enter"
+    validatePassword(event); // Llamar a la función de validación manualmente
+});
+
+// Asegurarse de que al presionar "Enter" no se envíe el formulario
 document.getElementById('loginForm').addEventListener('keypress', function(event) {
     if (event.key === 'Enter') {
         event.preventDefault(); // Prevenir el envío con "Enter"
