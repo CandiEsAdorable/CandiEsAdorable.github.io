@@ -46,16 +46,23 @@ window.onload = function() {
     document.getElementById('loginForm').reset();
 };
 
-// Función para manejar el evento de presionar "Enter" en el campo de contraseña
+// Prevenir el envío del formulario al presionar "Enter" en el campo de contraseña
 document.getElementById('password').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        event.preventDefault(); // Prevenir que el formulario se envíe al presionar "Enter"
-        document.activeElement.blur(); // Cerrar el teclado móvil al presionar "Enter"
+        event.preventDefault(); // Evitar el envío del formulario al presionar Enter
+        document.activeElement.blur(); // Cierra el teclado en móviles (si está abierto)
     }
 });
 
-// Función para escuchar el envío del formulario
+// Asegurarse de que al presionar "Enter" no se envíe el formulario
 document.getElementById('loginForm').addEventListener('submit', function(event) {
-    event.preventDefault(); // Prevenir el envío automático al presionar Enter
-    validatePassword(event); // Llamamos a la función de validación manualmente
+    event.preventDefault(); // Prevenir el envío automático al presionar "Enter"
+    validatePassword(event); // Llamar a la función de validación manualmente
+});
+
+// Evitar que el formulario se envíe al presionar "Enter" cuando el campo de contraseña está seleccionado
+document.getElementById('password').addEventListener('keydown', function(event) {
+    if (event.key === 'Enter') {
+        event.preventDefault(); // Prevenir que se envíe el formulario
+    }
 });
