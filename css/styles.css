@@ -71,22 +71,6 @@ body {
     }
 }
 
-
-
-/* Fondo negro para toda la página */
-body {
-    font-family: Arial, sans-serif;
-    background-color: #000000; /* Fondo negro */
-    color: #ffffff; /* Texto blanco */
-    margin: 0;
-    padding: 0;
-    display: flex;
-    justify-content: center; /* Centra horizontalmente */
-    align-items: center; /* Centra verticalmente */
-    min-height: 100vh; /* Ocupa toda la altura de la pantalla */
-    text-align: center; /* Asegura que el texto está centrado */
-}
-
 /* Estilos para el panel de login */
 .login-container {
     background-color: #333333; /* Fondo gris oscuro para el panel */
@@ -132,15 +116,8 @@ button:hover {
     background-color: #0056b3; /* Cambia el color del botón al pasar el mouse */
 }
 
-/* Estilo del mensaje de error */
-#error-message {
-    margin-top: 15px;
-    font-size: 1.2em;
-    font-weight: bold;
-}
-
 /* Estilos generales para centrar el mensaje de error */
-#error-message-box {
+#error-message-box, #success-message-box {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija para que esté en el centro */
     top: 50%; /* Centra verticalmente */
@@ -156,15 +133,15 @@ button:hover {
     text-align: center; /* Asegura que el texto está centrado */
 }
 
-/* Estilo del mensaje de error dentro de la caja */
-#error-message-box p {
+/* Estilo del mensaje de error y éxito dentro de la caja */
+#error-message-box p, #success-message-box p {
     font-size: 1.5em;
     font-weight: bold;
     margin: 0;
 }
 
-/* Estilo del botón de "Aceptar" en el mensaje */
-#error-message-box button {
+/* Estilo del botón de "Aceptar" en los mensajes */
+#error-message-box button, #success-message-box button {
     margin-top: 20px;
     padding: 10px;
     background-color: #007BFF;
@@ -175,47 +152,7 @@ button:hover {
     cursor: pointer;
 }
 
-#error-message-box button:hover {
-    background-color: #0056b3;
-}
-
-/* Estilos generales para centrar el mensaje de éxito */
-#success-message-box {
-    display: none; /* Oculto por defecto */
-    position: fixed; /* Posición fija para que esté en el centro */
-    top: 50%; /* Centra verticalmente */
-    left: 50%; /* Centra horizontalmente */
-    transform: translate(-50%, -50%); /* Ajuste final para centrar perfectamente */
-    background-color: #333333; /* Fondo gris oscuro */
-    color: #ffffff; /* Texto blanco */
-    padding: 20px;
-    border-radius: 10px;
-    box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Sombra */
-    width: 80%;
-    max-width: 400px; /* Ancho máximo */
-    text-align: center; /* Asegura que el texto está centrado */
-}
-
-/* Estilo del mensaje de éxito dentro de la caja */
-#success-message-box p {
-    font-size: 1.5em;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* Estilo del botón de "Aceptar" en el mensaje */
-#success-message-box button {
-    margin-top: 20px;
-    padding: 10px;
-    background-color: #007BFF;
-    color: #ffffff;
-    border: none;
-    border-radius: 5px;
-    font-size: 1.1em;
-    cursor: pointer;
-}
-
-#success-message-box button:hover {
+#error-message-box button:hover, #success-message-box button:hover {
     background-color: #0056b3;
 }
 
