@@ -10,7 +10,7 @@
 
     <!-- Contenedor de la página -->
     <div class="login-container">
-        <!-- Título que puede ser modificado desde script.js -->
+        <!-- Título que será modificado dinámicamente desde main.js -->
         <h2 id="title">Mensaje personalizado</h2>
 
         <!-- Formulario de contraseña -->
@@ -18,12 +18,15 @@
             <input type="password" id="password" placeholder="Contraseña" required>
             <button type="submit">Entrar</button>
         </form>
+    </div>
 
-        <!-- Mensaje de error (por ahora está oculto) -->
-        <p id="error-message" style="display: none; color: red;">Contraseña incorrecta</p>
+    <!-- Cuadro de error personalizado que estará inicialmente oculto -->
+    <div id="error-message-box" class="error-message-box" style="display: none;">
+        <p>Contraseña incorrecta. Inténtalo de nuevo.</p>
+        <button onclick="hideErrorMessage()">Aceptar</button>
     </div>
 
     <!-- Enlace al script JS -->
-   <script src="js/main.js"></script>
+    <script src="js/main.js"></script>
 </body>
 </html>

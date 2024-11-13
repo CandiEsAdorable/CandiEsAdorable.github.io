@@ -31,11 +31,16 @@ function validatePassword(event) {
     if (password.toLowerCase() === 'ohana') {
         console.log("Contraseña correcta. Redirigiendo..."); // Depuración
         // Si la contraseña es correcta, redirigir a index2.html
-        window.location.href = 'index2.html'; // Redirección a index2.html
+        window.location.href = 'index2.html';
     } else {
-        console.log("Contraseña incorrecta. Mostrando mensaje..."); // Depuración
-        // Si la contraseña es incorrecta, mostrar un mensaje de alerta y restablecer el formulario
-        alert('Contraseña incorrecta. Intenta de nuevo.');
-        document.getElementById('loginForm').reset(); // Limpiar el formulario
+        console.log("Contraseña incorrecta. Mostrando mensaje de error...");
+        // Mostrar el cuadro de error si la contraseña es incorrecta
+        document.getElementById('error-message-box').style.display = 'block';
     }
+}
+
+function hideErrorMessage() {
+    // Ocultar el cuadro de error y permitir intentar de nuevo
+    document.getElementById('error-message-box').style.display = 'none';
+    document.getElementById('loginForm').reset(); // Limpiar el formulario
 }
