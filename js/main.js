@@ -41,9 +41,14 @@ function hideErrorMessage() {
     document.getElementById('error-message-box').style.display = 'none';
 }
 
-// Resetea el formulario cada vez que la página se recarga o carga
+// Resetea el formulario y los mensajes cada vez que la página se recarga o carga
 window.onload = function() {
+    // Resetea el formulario
     document.getElementById('loginForm').reset();
+    
+    // Oculta los mensajes de error y éxito
+    document.getElementById('success-message-box').style.display = 'none';
+    document.getElementById('error-message-box').style.display = 'none';
 };
 
 // Prevenir el envío del formulario al presionar "Enter" en el campo de contraseña
