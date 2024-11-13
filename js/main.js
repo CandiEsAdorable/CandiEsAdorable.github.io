@@ -23,13 +23,13 @@ function validatePassword(event) {
         document.getElementById('success-message-box').style.display = 'block';
         // Ocultar mensaje de error si estaba visible
         document.getElementById('error-message-box').style.display = 'none';
-        localStorage.setItem('passwordCorrect', 'true');  // Guardamos que la contraseña fue correcta
+        sessionStorage.setItem('passwordCorrect', 'true');  // Guardamos que la contraseña fue correcta
     } else {
         // Mostrar el mensaje de error
         document.getElementById('error-message-box').style.display = 'block';
         // Ocultar mensaje de éxito si estaba visible
         document.getElementById('success-message-box').style.display = 'none';
-        localStorage.setItem('passwordCorrect', 'false');  // Guardamos que la contraseña fue incorrecta
+        sessionStorage.setItem('passwordCorrect', 'false');  // Guardamos que la contraseña fue incorrecta
     }
 }
 
@@ -46,7 +46,7 @@ function hideErrorMessage() {
 // Resetea el formulario y los mensajes cada vez que la página se recarga o carga
 window.onload = function() {
     // Limpiar el estado almacenado
-    localStorage.removeItem('passwordCorrect'); // Eliminar cualquier información almacenada
+    sessionStorage.removeItem('passwordCorrect'); // Eliminar cualquier información almacenada
 
     // Resetea el formulario
     document.getElementById('loginForm').reset();
@@ -59,7 +59,7 @@ window.onload = function() {
 // Evento 'pageshow' para manejar el estado cuando se navega hacia atrás
 window.addEventListener('pageshow', function() {
     // Limpiar el estado almacenado
-    localStorage.removeItem('passwordCorrect'); // Eliminar cualquier información almacenada
+    sessionStorage.removeItem('passwordCorrect'); // Eliminar cualquier información almacenada
 
     // Resetea el formulario
     document.getElementById('loginForm').reset();
