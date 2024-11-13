@@ -49,7 +49,13 @@ window.onload = function() {
 // Función para manejar el evento de presionar "Enter" en el campo de contraseña
 document.getElementById('password').addEventListener('keydown', function(event) {
     if (event.key === 'Enter') {
-        // Cierra el teclado al presionar Enter
-        document.activeElement.blur();
+        event.preventDefault(); // Prevenir que el formulario se envíe al presionar "Enter"
+        document.activeElement.blur(); // Cerrar el teclado móvil al presionar "Enter"
     }
+});
+
+// Función para escuchar el envío del formulario
+document.getElementById('loginForm').addEventListener('submit', function(event) {
+    event.preventDefault(); // Prevenir el envío automático al presionar Enter
+    validatePassword(event); // Llamamos a la función de validación manualmente
 });
