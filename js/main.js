@@ -1,3 +1,13 @@
+// Esta función se ejecutará cuando el usuario haga clic en el botón
+function toggleDescription(index) {
+    var description = document.getElementById("description-" + index);
+    if (description.style.display === "none" || description.style.display === "") {
+        description.style.display = "block";
+    } else {
+        description.style.display = "none";
+    }
+}
+
 // Cambiar el mensaje personalizado
 const customMessage = "Mensaje personalizado"; // Cambia este valor si quieres otro mensaje
 document.getElementById('title').textContent = customMessage;
@@ -30,3 +40,9 @@ function redirectToPage() {
 function hideErrorMessage() {
     document.getElementById('error-message-box').style.display = 'none';
 }
+
+
+// Resetea el formulario cada vez que la página se recarga o carga
+window.onload = function() {
+    document.getElementById('loginForm').reset();
+};

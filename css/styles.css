@@ -69,6 +69,18 @@ body {
     .header-text {
         font-size: 1.8em; /* Ajusta el tamaño del texto en móvil */
     }
+
+    /* Eleva el formulario y contenido en dispositivos móviles */
+    .login-container {
+        position: relative;
+        top: 20px; /* Eleva el recuadro del login en móvil */
+        width: 90%; /* Reduce un poco el ancho */
+    }
+
+    body {
+        justify-content: flex-start; /* Alinea el contenido hacia la parte superior */
+        padding-top: 20px; /* Da espacio extra en la parte superior */
+    }
 }
 
 /* Estilos para el panel de login */
@@ -116,21 +128,31 @@ button:hover {
     background-color: #0056b3; /* Cambia el color del botón al pasar el mouse */
 }
 
-/* Estilos generales para centrar el mensaje de error */
+/* Estilos generales para el cuadro de mensaje */
 #error-message-box, #success-message-box {
     display: none; /* Oculto por defecto */
     position: fixed; /* Posición fija para que esté en el centro */
     top: 50%; /* Centra verticalmente */
     left: 50%; /* Centra horizontalmente */
     transform: translate(-50%, -50%); /* Ajuste final para centrar perfectamente */
-    background-color: #333333; /* Fondo gris oscuro */
-    color: #ffffff; /* Texto blanco */
+    background-color: #333333; /* Fondo gris oscuro para ambos mensajes */
+    color: white; /* Texto blanco por defecto */
     padding: 20px;
     border-radius: 10px;
     box-shadow: 0 0 15px rgba(255, 255, 255, 0.3); /* Sombra */
     width: 80%;
     max-width: 400px; /* Ancho máximo */
     text-align: center; /* Asegura que el texto está centrado */
+}
+
+/* Mensaje de error (contraseña incorrecta) */
+#error-message-box p {
+    color: #ff4d4d; /* Texto rojo para el mensaje de error */
+}
+
+/* Mensaje de éxito (contraseña correcta) */
+#success-message-box p {
+    color: #28a745; /* Texto verde para el mensaje de éxito */
 }
 
 /* Estilo del mensaje de error y éxito dentro de la caja */
@@ -155,4 +177,3 @@ button:hover {
 #error-message-box button:hover, #success-message-box button:hover {
     background-color: #0056b3;
 }
-
