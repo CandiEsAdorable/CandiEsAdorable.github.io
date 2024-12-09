@@ -186,6 +186,6 @@ window.onload = function() {
 
 
 
-    // Reemplazar saltos de línea (\n) por <br> para permitir que se muestren en el HTML
+    // Reemplazar saltos de línea (\n) por <br> para permitir que se muestren en el HTM
     const textoConSaltos = textos[dia] ? textos[dia].replace(/\n/g, "<br>") : "";
     document.getElementById("modal-texto").innerHTML = textoConSaltos;
