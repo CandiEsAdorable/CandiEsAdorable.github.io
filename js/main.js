@@ -9,7 +9,7 @@ function toggleDescription(index) {
 }
 
 // Cambiar el mensaje personalizado
-const customMessage = "Mensaje personalizado"; // Cambia este valor si quieres otro mensaje
+const customMessage = "Introduce la contraseña"; // Cambia este valor si quieres otro mensaje
 document.getElementById('title').textContent = customMessage;
 
 // Función para validar la contraseña
@@ -97,3 +97,4 @@ document.getElementById('loginForm').addEventListener('keypress', function(event
         event.preventDefault(); // Prevenir el envío con "Enter"
     }
 });
+
