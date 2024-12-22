@@ -117,7 +117,7 @@ function showPista(pistaId) {
     if (pistaId === 1) {
         pistaText.textContent = "Es una palabra que define lo que eres para mí.";
     } else if (pistaId === 2) {
-        pistaText.textContent = "Ya la has tenido en tus manos... Me refería a la carta, ahí está la clave";
+        pistaText.textContent = "''Ya la has tenido en tus manos''... Me refería a la carta, ahí está la clave";
     }
 
     // Muestra el modal
