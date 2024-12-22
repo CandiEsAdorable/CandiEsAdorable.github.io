@@ -119,6 +119,8 @@ button {
     background-color: #007BFF; /* Color de fondo del botó1n */
     color: #ffffff;
     border: none;
+        width: 50%;
+
     border-radius: 5px;
     font-size: 1.1em;
     cursor: pointer;
@@ -266,11 +268,11 @@ body {
 .spoiler-button {
     margin-top: 10px;
     padding: 10px;
-    background-color: #333333;
+    background-color: green;
     color: white;
     border: none;
     cursor: pointer;
-    width: 100%;  /* Los botones ocupan todo el ancho */
+    width: 40%;  /* Los botones ocupan todo el ancho */
     font-size: 1.1em;
     border-radius: 5px;
 }
