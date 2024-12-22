@@ -98,3 +98,34 @@ document.getElementById('loginForm').addEventListener('keypress', function(event
     }
 });
 
+
+// Función para mostrar u ocultar el mensaje de la pista
+function showSpoiler(pista) {
+    const messageBox = document.getElementById('message-pista' + pista);
+    
+    // Verificamos si el mensaje está visible o no
+    if (messageBox.style.display === 'none' || messageBox.style.display === '') {
+        messageBox.style.display = 'block';  // Mostrar la pista
+    } else {
+        messageBox.style.display = 'none';   // Ocultar la pista
+    }
+}
+
+// Función para mostrar el modal con la pista correspondiente
+function showPista(pistaId) {
+    const pistaText = document.getElementById('pista-text');
+    if (pistaId === 1) {
+        pistaText.textContent = "Es una palabra que define lo que eres para mí.";
+    } else if (pistaId === 2) {
+        pistaText.textContent = "Ya la has tenido en tus manos... Me refería a la carta, ahí está la clave";
+    }
+
+    // Muestra el modal
+    document.getElementById('pista-modal').style.display = 'flex';
+}
+
+// Función para cerrar el modal
+function closeModal() {
+    document.getElementById('pista-modal').style.display = 'none';
+}
+
