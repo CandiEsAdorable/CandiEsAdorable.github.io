@@ -9,7 +9,7 @@ function toggleDescription(index) {
 }
 
 // Cambiar el mensaje personalizado
-const customMessage = "Introduce la contraseña"; // Cambia este valor si quieres otro mensaje
+const customMessage = "Introduce la contraseña"; // Cambia este alor si quieres otro mensaje
 document.getElementById('title').textContent = customMessage;
 
 // Función para validar la contraseña
